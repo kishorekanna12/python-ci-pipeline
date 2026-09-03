@@ -14,8 +14,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Stage 2: Verifying and executing the Python program...'
-                // Use 'python' instead of 'python3' if your Jenkins node is on Windows
-                sh 'python3 sum_app.py' 
+                bat 'python sum_app.py' //  This works perfectly on Windows
             }
         }
     }
